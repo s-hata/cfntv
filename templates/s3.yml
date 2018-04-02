@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: This template is creating s3 buckets.
+Parameters:
+  AppName:
+    Description: Name of Application
+    Type: String
+  Environment:
+    Description: Code of Environment
+    Type: String
+    AllowedValues: 
+      - DEV
+      - STG
+      - PRD
+  inputBucketName:
+    Description: Name of the input s3 bucket
+    Type: String
+  outputBucketName:
+    Description: Name of the output s3 bucket
+    Type: String
+Resources:
+  inputBucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Delete"
+    Properties: 
+      AccessControl: "BucketOwnerFullControl"
+      BucketName: !Ref "inputBucketName"
+  outputBucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Delete"
+    Properties: 
+      AccessControl: "BucketOwnerFullControl"
+      BucketName: !Ref "outputBucketName"

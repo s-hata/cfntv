@@ -1,0 +1,33 @@
+{
+  "name": "cfntv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-hata/cfntv.git"
+  },
+  "keywords": [
+    "aws"
+  ],
+  "author": "s-hata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-hata/cfntv/issues"
+  },
+  "homepage": "https://github.com/s-hata/cfntv#readme",
+  "dependencies": {
+    "aws-sdk": "^2.218.1",
+    "chalk": "^2.3.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "xo": "^0.20.3"
+  },
+  "xo": {
+    "space": 2
+  }
+}
